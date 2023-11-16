@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <h1>OTP Verification</h1>
+
+
+    <!-- OTP Sending Form -->
+    <form method="post">
+        {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="hidden" name="action" value="send">
+        <button type="submit">Send OTP</button>
+    </form>
+
+    <!-- OTP Verification Form -->
+    <form method="post">
+        {% csrf_token %}
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="otp" name="otp" required>
+        <input type="hidden" name="email" value="{{ request.POST.email }}">
+        <input type="hidden" name="action" value="verify">
+        <button type="submit">Verify OTP</button>
+    </form>
+    <!-- Display success or error messages -->
+    {% for msg in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Hey !</strong> {{msg}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+
+</body>
+</html>

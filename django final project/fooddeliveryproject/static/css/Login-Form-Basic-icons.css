@@ -1,0 +1,253 @@
+.bs-icon {
+  --bs-icon-size: .75rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--bs-icon-size);
+  width: calc(var(--bs-icon-size) * 2);
+  height: calc(var(--bs-icon-size) * 2);
+  color: var(--bs-primary);
+}
+.container{
+  position: absolute;
+  top: 12%;
+
+}
+#resregform{
+  position:absolute;
+  top: 10%;
+  left: 20%;
+  z-index: 2;
+}
+#cuslogform{
+  z-index: 2;
+}
+#cusregform{
+  z-index: 2;
+}
+.bs-icon-xs {
+  --bs-icon-size: 1rem;
+  width: calc(var(--bs-icon-size) * 1.5);
+  height: calc(var(--bs-icon-size) * 1.5);
+}
+
+.bs-icon-sm {
+  --bs-icon-size: 1rem;
+}
+
+.bs-icon-md {
+  --bs-icon-size: 1.5rem;
+}
+
+.bs-icon-lg {
+  --bs-icon-size: 2rem;
+}
+
+.bs-icon-xl {
+  --bs-icon-size: 2.5rem;
+}
+
+.bs-icon.bs-icon-primary {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
+.bs-icon.bs-icon-primary-light {
+  color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), .2);
+}
+
+.bs-icon.bs-icon-semi-white {
+  color: var(--bs-primary);
+  background: rgba(255, 255, 255, .5);
+}
+
+.bs-icon.bs-icon-rounded {
+  border-radius: .5rem;
+}
+
+.bs-icon.bs-icon-circle {
+  border-radius: 50%;
+}
+.bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 100%; 
+  height: 100%;
+  
+}
+.bg img {
+  position: relative; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  z-index: -1;
+}
+.register-form form.custom-form {
+  padding: 55px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  font: bold 14px sans-serif;
+  text-align: center;
+  margin: 50px;
+  color: #333;
+}.bs-icon {
+  --bs-icon-size: .75rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--bs-icon-size);
+  width: calc(var(--bs-icon-size) * 2);
+  height: calc(var(--bs-icon-size) * 2);
+  color: var(--bs-primary);
+}
+
+.bs-icon-xs {
+  --bs-icon-size: 1rem;
+  width: calc(var(--bs-icon-size) * 1.5);
+  height: calc(var(--bs-icon-size) * 1.5);
+}
+
+.bs-icon-sm {
+  --bs-icon-size: 1rem;
+}
+
+.bs-icon-md {
+  --bs-icon-size: 1.5rem;
+}
+
+.bs-icon-lg {
+  --bs-icon-size: 2rem;
+}
+
+.bs-icon-xl {
+  --bs-icon-size: 2.5rem;
+}
+
+.bs-icon.bs-icon-primary {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
+.bs-icon.bs-icon-primary-light {
+  color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), .2);
+}
+
+.bs-icon.bs-icon-semi-white {
+  color: var(--bs-primary);
+  background: rgba(255, 255, 255, .5);
+}
+
+.bs-icon.bs-icon-rounded {
+  border-radius: .5rem;
+}
+
+.bs-icon.bs-icon-circle {
+  border-radius: 50%;
+}
+
+
+
+@media (max-width:400px) {
+  .register-form form.custom-form {
+    padding: 55px 10px;
+  }
+}
+
+.register-form .custom-form h1 {
+  display: inline-block;
+  color: #4c565e;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 10px 15px;
+  margin-bottom: 60px;
+  border-bottom: 2px solid rgb(108, 174, 224);
+}
+
+.register-form .custom-form .form-group {
+  margin-bottom: 25px;
+}
+
+.register-form .custom-form .label-column {
+  text-align: right;
+  color: #5F5F5F;
+}
+
+@media (max-width:768px) {
+  .register-form .custom-form .label-column {
+    text-align: left;
+  }
+}
+
+.register-form .custom-form .input-column {
+  color: #5f5f5f;
+  text-align: left;
+}
+
+.register-form .custom-form .input-column input {
+  color: #5f5f5f;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  height: 42px;
+}
+
+.register-form .custom-form .dropdown .dropdown-toggle {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  color: #333;
+  outline: none;
+}
+
+.register-form .custom-form .dropdown ul {
+  background: #fff;
+}
+
+.register-form .custom-form .dropdown ul li a {
+  background: #fff;
+  color: #333;
+  opacity: 0.8;
+}
+
+.register-form .custom-form .dropdown ul li a:hover {
+  opacity: 1;
+}
+
+.register-form .custom-form .submit-button {
+  border-radius: 2px;
+  background: #6caee0;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 14px 22px;
+  border: 0;
+  margin: 30px;
+  outline: none;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.card{
+            
+  float:left;
+  margin: 10px 10px 10px 10px;
+}
+/* get login page begind the restaurant cards */

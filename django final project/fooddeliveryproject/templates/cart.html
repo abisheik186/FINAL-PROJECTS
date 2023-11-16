@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="row g-0">
+            {% for cart in cart_items %}
+            <div class="col-md-12 col-lg-8">
+                <div class="items">
+                    <div class="product">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-3">
+                                <div class="product-image"><img class="img-fluid d-block mx-auto image" src="{{cart.dishes.image.url}}"></div>
+                            </div>
+                            <div class="col-md-5 product-info"><h2 class="product-name" >{{ cart.dishes.name }}</h2>
+                                <div class="product-specs">
+                                    <div><span>Restaurant:&nbsp;</span><span class="value">{{ cart.dishes.restaurant.res_name }}</div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-2 quantity"><label class="form-label d-none d-md-block" for="quantity">Quantity</label>
+                                <span  id="number-1" class="form-control quantity-input">{{cart.quantity}}</span></div>
+                            <div class="col-6 col-md-2 price"><span>₹{{ cart.total }} </span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-md-12 col-lg-4">
+                <div class="summary">
+                    <h3>Summary</h3>
+                    <h4><span class="text">Discount: </span><span class="price">₹0</span></h4>
+                    <h4><span class="text">Shipping: </span><span class="price">₹0</span></h4>
+                    <h4><span class="text">Total: </span><span class="price">₹{{total}}</span></h4>
+                    <a class="btn btn-primary btn-lg d-block w-100" role="button" href="{% url 'paymentdone' %}">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
